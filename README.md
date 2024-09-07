@@ -1,7 +1,22 @@
-### Overview
+### Usage
 
-You can use this template to create library for React app, or for node app
+Example
 
-### To install, run:
+    import { omit, pick } from '@tinychange/omit-pick'
 
-`npx @tinychange/new-react-lib`
+    const user = {
+    	name : "David",
+    	age: 23,
+    	address: "USA",
+    	gender: "male"
+    }
+
+    // take address, gender only
+    console.log(
+    	pick(user, ["address", "gender"])
+    )
+
+    // remove name, and gender
+    console.log(
+    	omit(user, ["name", "gender"])
+    )
